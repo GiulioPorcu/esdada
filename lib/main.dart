@@ -5,16 +5,16 @@ import 'pages/homepage.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-      create: (context) => ThemeProvider(), child: const MyApp()));
+      create: (context) => ThemeProvider(), child: const MainApplication()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApplication extends StatelessWidget {
+  const MainApplication({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wifi Reminder',
+      title: 'Esdada',
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).currentTheme,
       home: const HomePage(),

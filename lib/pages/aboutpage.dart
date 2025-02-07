@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:esdada/components/toggle_theme_button.dart';
-import 'package:esdada/components/wifi_reminder_drawer.dart';
+import 'package:esdada/components/application_drawer.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -36,7 +36,7 @@ class _AboutPageState extends State<AboutPage> {
       body: Center(
         child: FloatingActionButton(onPressed: () {}),
       ),
-      drawer: WifiReminderDrawer(),
+      drawer: ApplicationDrawer(),
     );
   }
 }

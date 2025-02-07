@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:esdada/components/toggle_theme_button.dart';
-import 'package:esdada/components/wifi_reminder_drawer.dart';
+import 'package:esdada/components/application_drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      drawer: WifiReminderDrawer(),
+      drawer: ApplicationDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',

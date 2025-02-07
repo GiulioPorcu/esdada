@@ -1,26 +1,24 @@
-import 'package:flutter/material.dart';
-import 'package:esdada/components/toggle_theme_button.dart';
 import 'package:esdada/components/application_drawer.dart';
+import 'package:flutter/material.dart';
 
-class SettingsPage extends StatefulWidget {
-  const SettingsPage({super.key});
+class CreatePage extends StatefulWidget {
+  const CreatePage({super.key});
 
   @override
-  State<SettingsPage> createState() => _SettingsPageState();
+  State<CreatePage> createState() => _AboutPageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
+class _AboutPageState extends State<CreatePage> {
   @override
   Widget build(BuildContext context) {
+
     ColorScheme colorScheme = Theme.of(context).colorScheme;
     TextTheme textTheme = Theme.of(context).textTheme;
-
     return Scaffold(
-      appBar: AppBar(
+appBar: AppBar(
           backgroundColor: colorScheme.primary,
-          title: Text("Settings"),
+          title: Text("Create new entity..."),
           actions: [
-            ToggleThemeButton(),
           ],
           leading: Builder(
             builder: (BuildContext context) {

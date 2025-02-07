@@ -1,10 +1,12 @@
+import 'package:esdada/components/drawer_divider.dart';
+import 'package:esdada/pages/createpage.dart';
 import 'package:flutter/material.dart';
 import 'package:esdada/pages/aboutpage.dart';
 import 'package:esdada/pages/homepage.dart';
 import 'package:esdada/pages/settingspage.dart';
 
-class WifiReminderDrawer extends StatelessWidget {
-  const WifiReminderDrawer({super.key});
+class ApplicationDrawer extends StatelessWidget {
+  const ApplicationDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class WifiReminderDrawer extends StatelessWidget {
                       SizedBox(
                         height: 8,
                       ),
-                      Text('Wifi Reminder', style: textTheme.headlineLarge),
+                      Text('Esdada', style: textTheme.headlineLarge),
                     ],
                   ),
                 ),
@@ -52,6 +54,41 @@ class WifiReminderDrawer extends StatelessWidget {
                     );
                   },
                 ),
+                DrawerDivider(),
+                ListTile(
+                  leading: Icon(Icons.add),
+                  title: Text('Create entity'),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CreatePage()),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.update),
+                  title: Text('Update entity'),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CreatePage()),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.delete_rounded),
+                  title: Text('Delete entity'),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CreatePage()),
+                    );
+                  },
+                ),
+                DrawerDivider(),
                 ListTile(
                   leading: Icon(Icons.settings),
                   title: Text('Settings'),

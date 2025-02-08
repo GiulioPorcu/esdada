@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:esdada/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-class ToggleThemeButton extends StatelessWidget {
-  const ToggleThemeButton({super.key});
+class CToggleThemeButton extends StatelessWidget {
+  const CToggleThemeButton({super.key});
 
   @override
   Widget build(BuildContext context) {

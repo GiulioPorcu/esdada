@@ -9,7 +9,7 @@ ThemeData lightThemeData = ThemeData(
         secondary: Colors.grey.shade400),
     textTheme: TextTheme(
       headlineLarge: TextStyle(fontSize: 28, color: Colors.black),
-      headlineMedium: TextStyle(fontSize: 60, color: Colors.black),
+      headlineMedium: TextStyle(fontSize: 20, color: Colors.black),
       headlineSmall: TextStyle(fontSize: 14, color: Colors.black),
     ));
 

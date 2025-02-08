@@ -1,40 +1,23 @@
-import 'package:esdada/components/application_drawer.dart';
+import 'package:esdada/components/custom_app_bar.dart';
+import 'package:esdada/components/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class CreatePage extends StatefulWidget {
   const CreatePage({super.key});
 
   @override
-  State<CreatePage> createState() => _AboutPageState();
+  State<CreatePage> createState() => _CreatePageState();
 }
 
-class _AboutPageState extends State<CreatePage> {
+class _CreatePageState extends State<CreatePage> {
   @override
   Widget build(BuildContext context) {
-
-    ColorScheme colorScheme = Theme.of(context).colorScheme;
-    TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
-appBar: AppBar(
-          backgroundColor: colorScheme.primary,
-          title: Text("Create new entity..."),
-          actions: [
-          ],
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
-            },
-          )),
+      appBar: CAppBar(title: "Create", actions: []),
       body: Center(
         child: FloatingActionButton(onPressed: () {}),
       ),
-      drawer: ApplicationDrawer(),
+      drawer: CDrawer(),
     );
   }
 }

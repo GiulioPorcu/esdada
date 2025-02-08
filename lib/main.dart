@@ -13,10 +13,12 @@ class MainApplication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
+
     return MaterialApp(
-      title: 'Esdada',
+      title: 'SData Query Tool',
       debugShowCheckedModeBanner: false,
-      theme: Provider.of<ThemeProvider>(context).currentTheme,
+      theme: themeProvider.currentTheme,
       home: const HomePage(),
     );
   }

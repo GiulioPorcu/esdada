@@ -1,6 +1,7 @@
-import 'package:esdada/components/custom_app_bar.dart';
+import 'package:esdada/components/c_app_bar.dart';
+import 'package:esdada/components/connection_info_box.dart';
 import 'package:flutter/material.dart';
-import 'package:esdada/components/custom_drawer.dart';
+import 'package:esdada/components/c_drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,9 +17,13 @@ class _HomePageState extends State<HomePage> {
       appBar: CAppBar(title: "Home", actions: []),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ConnectionInfoBox(),
+              Expanded(
+                child: SizedBox.shrink(),
+              ),
+            ]),
       ),
       drawer: CDrawer(),
     );

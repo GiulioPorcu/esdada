@@ -1,6 +1,6 @@
-import 'package:esdada/components/custom_app_bar.dart';
+import 'package:esdada/components/c_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:esdada/components/custom_drawer.dart';
+import 'package:esdada/components/c_drawer.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});

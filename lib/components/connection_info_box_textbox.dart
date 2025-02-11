@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 class ConnectionInfoBoxTextbox extends StatelessWidget {
   const ConnectionInfoBoxTextbox(
-      {super.key, required this.placeholder, this.isPassword = false});
+      {super.key, required this.placeholder, this.isPassword = false, required this.icon});
 
   final String placeholder;
   final bool isPassword;
+  final Widget icon;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +17,7 @@ class ConnectionInfoBoxTextbox extends StatelessWidget {
       decoration: InputDecoration(
         labelText: placeholder,
         border: OutlineInputBorder(),
+        icon: icon
       ),
     );
   }

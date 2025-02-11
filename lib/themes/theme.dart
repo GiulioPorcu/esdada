@@ -11,6 +11,7 @@ ThemeData lightThemeData = ThemeData(
       headlineLarge: TextStyle(fontSize: 28, color: Colors.black),
       headlineMedium: TextStyle(fontSize: 20, color: Colors.black),
       headlineSmall: TextStyle(fontSize: 14, color: Colors.black),
+    labelSmall: TextStyle(fontSize: 14, color: Colors.deepPurple),
     ));
 
 ThemeData darkThemeData = ThemeData(
@@ -25,4 +26,5 @@ ThemeData darkThemeData = ThemeData(
       headlineLarge: TextStyle(fontSize: 28, color: Colors.white),
       headlineMedium: TextStyle(fontSize: 20, color: Colors.white),
       headlineSmall: TextStyle(fontSize: 14, color: Colors.white),
+    labelSmall: TextStyle(fontSize: 14, color: Colors.deepPurple),
     ));

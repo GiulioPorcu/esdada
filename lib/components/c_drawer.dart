@@ -55,6 +55,11 @@ class CDrawer extends StatelessWidget {
                 ),
                 CDivider(),
                 CDrawerItem(
+                  text: "Gitlab Repository",
+                  leadingIcon: Icon(Icons.code),
+                  navigationTarget: SettingsPage(),
+                ),
+                CDrawerItem(
                   text: "Settings",
                   leadingIcon: Icon(Icons.settings),
                   navigationTarget: SettingsPage(),

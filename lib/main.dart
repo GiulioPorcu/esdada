@@ -1,11 +1,22 @@
+import 'package:esdada/services/storage_service.dart';
 import 'package:flutter/material.dart';
 import 'package:esdada/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'pages/homepage.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => ThemeProvider(), child: const MainApplication()));
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.getInstance().then((sharedPreferences) {
+    StorageService().instance = sharedPreferences;
+
+    runApp(
+      ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+        child: const MainApplication(),
+      ),
+    );
+  });
 }
 
 class MainApplication extends StatelessWidget {

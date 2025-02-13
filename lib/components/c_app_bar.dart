@@ -16,12 +16,14 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       backgroundColor: colorScheme.primary,
-      title: Text(title, style: textTheme.headlineMedium),
+      title: Text(title, style: textTheme.headlineLarge),
       actions: actions,
       leading: Builder(
         builder: (context) {
           return IconButton(
-            icon: const Icon(Icons.menu),
+            icon: const Icon(
+              Icons.menu,
+            ),
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },

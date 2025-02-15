@@ -1,3 +1,4 @@
+import 'package:esdada/pages/aboutpage.dart';
 import 'package:flutter/material.dart';
 
 class CDrawerTitleArea extends StatelessWidget {
@@ -13,25 +14,22 @@ class CDrawerTitleArea extends StatelessWidget {
     TextTheme textTheme = Theme.of(context).textTheme;
 
     return Material(
-      color: colorScheme.primary,
+      color: colorScheme.surfaceDim,
       child: InkWell(
-        onTap: () {
-          Navigator.pop(context);
-        },
+        onTap: () {Navigator.pop(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AboutPage(),
+            ),
+          );},
         child: Container(
           padding: EdgeInsets.only(top: 24, bottom: 24),
           child: Column(
             children: [
-              CircleAvatar(
-                radius: 36,
-                backgroundImage: titleImage,
-              ),
-              SizedBox(
-                height: 8,
-              ),
               Text(
                 title,
-                style: textTheme.headlineLarge,
+                style: textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
               ),
             ],
           ),

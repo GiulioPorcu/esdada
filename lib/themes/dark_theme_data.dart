@@ -5,31 +5,62 @@ class DarkThemeData {
   double fontSizeMedium = 14;
   double fontSizeSmall = 12;
 
+  Color backgroundColor = Colors.grey.shade700;
+  Color backgroundColorDim = Colors.grey.shade800;
+  Color primary = Colors.blue.shade700;
+  Color secondary = Colors.blue.shade500;
+  Color headlineColor = Colors.white;
+  Color bodyColor = Colors.white;
+  Color labelColor = Colors.blue.shade400;
+  Color onSurfaceColor = Colors.white;
+
   getInstance() {
     return ThemeData(
       brightness: Brightness.dark,
       useMaterial3: true,
       colorScheme: ColorScheme.dark(
-        surface: Colors.grey.shade900,
-        primary: Colors.deepOrange.shade900,
-        secondary: Colors.deepOrange.shade600,
+          surface: backgroundColor,
+        surfaceDim: backgroundColorDim,
+        onSurface: onSurfaceColor,
+        primary: primary,
+        secondary: secondary,
       ),
       textTheme: TextTheme(
         headlineLarge: TextStyle(
           fontSize: fontSizeLarge,
-          color: Colors.black,
+          color: headlineColor,
         ),
         headlineMedium: TextStyle(
           fontSize: fontSizeMedium,
-          color: Colors.black,
+          color: headlineColor,
         ),
         headlineSmall: TextStyle(
           fontSize: fontSizeSmall,
-          color: Colors.black,
+          color: headlineColor,
+        ),
+        bodyLarge: TextStyle(
+          fontSize: fontSizeLarge,
+          color: bodyColor,
+        ),
+        bodyMedium: TextStyle(
+          fontSize: fontSizeMedium,
+          color: bodyColor,
+        ),
+        bodySmall: TextStyle(
+          fontSize: fontSizeSmall,
+          color: bodyColor,
+        ),
+        labelLarge: TextStyle(
+          fontSize: fontSizeLarge,
+          color: labelColor,
+        ),
+        labelMedium: TextStyle(
+          fontSize: fontSizeMedium,
+          color: labelColor,
         ),
         labelSmall: TextStyle(
           fontSize: fontSizeSmall,
-          color: Colors.orange,
+          color: labelColor,
         ),
       ),
     );

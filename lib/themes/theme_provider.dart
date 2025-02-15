@@ -15,7 +15,6 @@ class ThemeProvider with ChangeNotifier {
     StorageService().instance?.getString(key) == lightThemeValue
         ? setLightTheme()
         : setDarkTheme();
-
     notifyListeners();
   }
 
@@ -32,11 +31,7 @@ class ThemeProvider with ChangeNotifier {
   }
 
   void toggleTheme() {
-    if (isLightTheme == true) {
-      setDarkTheme();
-    } else {
-      setLightTheme();
-    }
+    isLightTheme ? setDarkTheme() : setLightTheme();
     notifyListeners();
   }
 }

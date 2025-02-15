@@ -7,6 +7,7 @@ import 'pages/homepage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   SharedPreferences.getInstance().then((sharedPreferences) {
     StorageService().instance = sharedPreferences;
 

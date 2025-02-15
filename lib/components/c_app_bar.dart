@@ -15,14 +15,20 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
     TextTheme textTheme = Theme.of(context).textTheme;
 
     return AppBar(
-      backgroundColor: colorScheme.primary,
-      title: Text(title, style: textTheme.headlineLarge),
+      backgroundColor: colorScheme.surfaceDim,
+      title: Text(
+        title,
+        style: textTheme.headlineLarge?.copyWith(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
       actions: actions,
       leading: Builder(
         builder: (context) {
           return IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.menu,
+              color: colorScheme.onSurface,
             ),
             onPressed: () {
               Scaffold.of(context).openDrawer();

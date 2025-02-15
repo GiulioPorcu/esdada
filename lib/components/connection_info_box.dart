@@ -13,137 +13,110 @@ class ConnectionInfoBox extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.all(spacing * 2),
-      child: Column(
-        children: [
-          Ink(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(spacing),
-              color: colorScheme.secondary,
+      child: Ink(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(spacing),
+          color: colorScheme.surfaceDim,
+        ),
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(spacing),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Connection Overview",
+                style: textTheme.headlineMedium,
+              ),
             ),
-            child: Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.all(spacing),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Connection Overview",
-                    style: textTheme.headlineMedium,
+            Container(
+              padding: EdgeInsets.all(spacing),
+              child: Column(
+                children: [
+                  ConnectionInfoBoxTextbox(
+                    placeholder: "Base URL",
+                    icon: Icon(
+                      Icons.cloud_outlined,
+                    ),
                   ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(spacing),
-                  child: Column(
+                  SizedBox(height: spacing),
+                  ConnectionInfoBoxTextbox(
+                    placeholder: "User Name",
+                    icon: Icon(Icons.person),
+                  ),
+                  SizedBox(height: spacing),
+                  ConnectionInfoBoxTextbox(
+                    placeholder: "Password",
+                    isPassword: true,
+                    icon: Icon(Icons.password),
+                  ),
+                  SizedBox(height: spacing),
+                  Row(
                     children: [
-                      ConnectionInfoBoxTextbox(
-                        placeholder: "Base URL",
-                        icon: Icon(
-                          Icons.cloud_outlined,
+                      Container(
+                        padding: EdgeInsets.all(spacing / 2),
+                        alignment: Alignment.centerLeft,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Manage profiles",
+                            style: textTheme.labelSmall,
+                          ),
                         ),
                       ),
-                      SizedBox(height: spacing),
-                      ConnectionInfoBoxTextbox(
-                        placeholder: "User Name",
-                        icon: Icon(Icons.person),
+                      Text(
+                        "|",
+                        style: textTheme.bodySmall,
                       ),
-                      SizedBox(height: spacing),
-                      ConnectionInfoBoxTextbox(
-                        placeholder: "Password",
-                        isPassword: true,
-                        icon: Icon(Icons.password),
+                      Container(
+                        padding: EdgeInsets.all(spacing / 2),
+                        alignment: Alignment.centerLeft,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Load profile",
+                            style: textTheme.labelSmall,
+                          ),
+                        ),
                       ),
-                      SizedBox(height: spacing),
-                      Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(spacing / 2),
-                            alignment: Alignment.centerLeft,
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Manage profiles",
-                                style: textTheme.labelSmall,
-                              ),
-                            ),
+                      Text(
+                        "|",
+                        style: textTheme.bodySmall,
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(spacing / 2),
+                        alignment: Alignment.centerLeft,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Save profile",
+                            style: textTheme.labelSmall,
                           ),
-                          Text(
-                            "|",
-                            style: textTheme.bodySmall,
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(spacing / 2),
-                            alignment: Alignment.centerLeft,
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Load profile",
-                                style: textTheme.labelSmall,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "|",
-                            style: textTheme.bodySmall,
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(spacing / 2),
-                            alignment: Alignment.centerLeft,
-                            child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Save profile",
-                                style: textTheme.labelSmall,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: SizedBox.shrink(),
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              "Test connection",
-                              style: textTheme.labelSmall,
-                            ),
-                          ),
-                        ],
+                        ),
+                      ),
+                      Expanded(
+                        child: SizedBox.shrink(),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Test connection",
+                          style: textTheme.labelSmall,
+                        ),
                       ),
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(spacing),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "This application is the foundation of a new frontend used for SData.",
+            Container(
+              padding: EdgeInsets.all(spacing),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "This application is the foundation of a new frontend used for SData.",
+              ),
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(spacing),
-            alignment: Alignment.centerLeft,
-            child: Column(
-              children: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CreatePage(),
-                      ),
-                    );
-                  },
-                  child: Text(
-                    "Create a new entity...",
-                    selectionColor: colorScheme.tertiary,
-                    style: textTheme.labelSmall,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

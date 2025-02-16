@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:esdada/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-class CToggleThemeButton extends StatefulWidget {
-  const CToggleThemeButton({super.key});
+class ToggleThemeButton extends StatefulWidget {
+  const ToggleThemeButton({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return CToggleThemeButtonState();
+    return ToggleThemeButtonState();
   }
 }
 
-class CToggleThemeButtonState extends State<CToggleThemeButton> {
+class ToggleThemeButtonState extends State<ToggleThemeButton> {
   @override
   Widget build(BuildContext context) {
     ThemeProvider provider = Provider.of<ThemeProvider>(context, listen: false);
